@@ -4,6 +4,7 @@ from scipy.stats import norm
 !pip install google.colab
 from google.colab import files
 import pandas as pd
+chat_id = 789271490  # Ваш chat ID, не меняйте название переменной
 
 # Откроется диалоговое окно для загрузки файла
 uploaded = files.upload()
@@ -13,8 +14,6 @@ file_name = list(uploaded.keys())[0]
 
 # Загрузка файла в DataFrame
 data = pd.read_csv(file_name)
-
-chat_id = 789271490  # Ваш chat ID, не меняйте название переменной
 
 # Допустим, четные и нечетные `ID` определяют разные группы.
 data['group'] = data['ID'] % 2  # Четные в одной группе, нечетные в другой
